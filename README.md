@@ -19,8 +19,6 @@ Config file
 -----------
 Default location is ./haproxy-statsd.conf.
 
-	Config file format
-	------------------
 	[haproxy-statsd]
 	haproxy_url = http://127.0.0.1:1936/;csv
 	haproxy_user =
