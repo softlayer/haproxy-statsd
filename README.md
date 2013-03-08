@@ -5,7 +5,7 @@ This script reports stats to statsd using [haproxy's stats interface](https://co
 Usage
 -----
 
-    usage: haproxy-statsd.py [-h] [-c CONFIG]
+    usage: report_haproxy.py [-h] [-c CONFIG] [-x]
 
     Report haproxy stats to statsd
 
@@ -13,6 +13,7 @@ Usage
       -h, --help            show this help message and exit
       -c CONFIG, --config CONFIG
                             Config file location
+      -1, --once        Run once and exit
 
 
 Config file
@@ -26,6 +27,7 @@ Default location is ./haproxy-statsd.conf.
     statsd_host = 127.0.0.1
     statsd_port = 8125
     statsd_namespace = haproxy.(HOSTNAME)
+    interval = 5
 
 
 Statsd Paths
