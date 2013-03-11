@@ -1,6 +1,6 @@
 #!/usr/bin/python
 """
-usage: report_haproxy.py [-h] [-c CONFIG] [-x]
+usage: report_haproxy.py [-h] [-c CONFIG] [-1]
 
 Report haproxy stats to statsd
 

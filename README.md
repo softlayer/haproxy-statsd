@@ -5,7 +5,7 @@ This script reports stats to statsd using [haproxy's stats interface](https://co
 Usage
 -----
 
-    usage: report_haproxy.py [-h] [-c CONFIG] [-x]
+    usage: report_haproxy.py [-h] [-c CONFIG] [-1]
 
     Report haproxy stats to statsd
 
