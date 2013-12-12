@@ -1,6 +1,6 @@
 haproxy-statsd
 --------------
-This script reports stats to statsd using [haproxy's stats interface](https://code.google.com/p/haproxy-docs/wiki/StatisticsMonitoring).
+This script reports stats to statsd using haproxy's stats interface. [See Demo](http://demo.1wt.eu/). [See demo CSV](http://demo.1wt.eu/;csv).
 
 Usage
 -----
@@ -37,5 +37,3 @@ All metrics are reported with paths matching this format:
     stats.gauges.[namespace].[pxname].[svname].[statname]
 
 The following stats are monitored: scur, smax, ereq, econ, rate, bin, bout
-
-To map these names to their meanings, reference the haproxy docs here: https://code.google.com/p/haproxy-docs/wiki/StatisticsMonitoring
