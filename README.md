@@ -1,6 +1,8 @@
 haproxy-statsd
 --------------
-This script reports stats to statsd using haproxy's stats interface. [See Demo](http://demo.1wt.eu/). [See demo CSV](http://demo.1wt.eu/;csv). Currently only works with Python 2.6 and Python 2.7.
+This script reports stats to statsd using [haproxy's](http://haproxy.1wt.eu/) stats interface. [See Stats Interface Demo](http://demo.1wt.eu/) ([CSV](http://demo.1wt.eu/;csv)).
+
+Supported with Python 2.6 and Python 2.7.
 
 Usage
 -----
