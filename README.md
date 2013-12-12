@@ -23,14 +23,14 @@ Config file
 Default location is ./haproxy-statsd.conf.
 
 ```
-    [haproxy-statsd]
-    haproxy_url = http://127.0.0.1:1936/;csv
-    haproxy_user =
-    haproxy_password =
-    statsd_host = 127.0.0.1
-    statsd_port = 8125
-    statsd_namespace = haproxy.(HOSTNAME)
-    interval = 5
+[haproxy-statsd]
+haproxy_url = http://127.0.0.1:1936/;csv
+haproxy_user =
+haproxy_password =
+statsd_host = 127.0.0.1
+statsd_port = 8125
+statsd_namespace = haproxy.(HOSTNAME)
+interval = 5
 ```
 
 Statsd Paths
