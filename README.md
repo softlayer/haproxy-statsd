@@ -39,4 +39,6 @@ All metrics are reported with paths matching this format:
 
     stats.gauges.[namespace].[pxname].[svname].[statname]
 
-The following stats are monitored: scur, smax, ereq, econ, rate, bin, bout
+The following stats are monitored: scur, smax, ereq, econ, rate, bin, bout, hrsp_1xx, hrsp_2xx, hrsp_3xx, hrsp_4xx, hrsp_5xx, qtime, ctime, rtime, ttime.
+
+For more information about those metrics please refer to: [HAProxy' stats](http://cbonte.github.io/haproxy-dconv/configuration-1.5.html#9.1) documentation.
