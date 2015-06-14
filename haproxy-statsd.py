@@ -27,6 +27,7 @@ import csv
 import socket
 import argparse
 import ConfigParser
+import os
 
 import requests
 from requests.auth import HTTPBasicAuth
@@ -43,9 +44,9 @@ def get_haproxy_report(url, user=None, password=None):
 
 
 def report_to_statsd(stat_rows,
-                     host='127.0.0.1',
-                     port=8125,
-                     namespace='haproxy'):
+                     host=os.getenv('STATSD_HOST', '127.0.0.1'),
+                     port=os.getenv('STATSD_PORT', 8125),
+                     namespace=os.getenv('STATSD_NAMESPACE', 'haproxy')):
     udp_sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     stat_count = 0
 
@@ -75,12 +76,12 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
     config = ConfigParser.ConfigParser({
-        'haproxy_url': 'http://127.0.0.1:1936/;csv',
-        'haproxy_user': '',
-        'haproxy_password': '',
-        'statsd_namespace': 'haproxy.(HOSTNAME)',
-        'statsd_host': '127.0.0.1',
-        'statsd_port': '8125',
+        'haproxy_url': os.getenv('HAPROXY_HOST', 'http://127.0.0.1:1936/;csv'),
+        'haproxy_user': os.getenv('HAPROXY_USER',''),
+        'haproxy_password': os.getenv('HAPROXY_PASS',''),
+        'statsd_namespace': os.getenv('STATSD_NAMESPACE', 'haproxy.(HOSTNAME)'),
+        'statsd_host': os.getenv('STATSD_HOST', '127.0.0.1'),
+        'statsd_port': os.getenv('STATSD_PORT', 8125),
         'interval': '5',
     })
     config.add_section('haproxy-statsd')
