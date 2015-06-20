@@ -17,6 +17,17 @@ optional arguments:
                         Config file location
   -1, --once        Run once and exit
 ```
+Configuration via environnement
+-------------------------------
+```
+STATSD_HOST=127.0.0.1 \
+STATSD_PORT=8125 \
+STATSD_NAMESPACE=haproxy \
+HAPROXY_HOST=127.0.0.1 \
+HAPROXY_USER=stats \
+HAPROXY_PASS=stats \
+report_haproxy.py
+```
 
 Config file
 -----------
