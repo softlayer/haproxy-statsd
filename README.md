@@ -17,7 +17,7 @@ optional arguments:
                         Config file location
   -1, --once        Run once and exit
 ```
-Configuration via environnement
+Configuration via environment
 -------------------------------
 ```
 STATSD_HOST=127.0.0.1 \
